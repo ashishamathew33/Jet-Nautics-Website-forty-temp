@@ -119,6 +119,31 @@
 	// Tiles.
 		var $tiles = $('.tiles > article');
 
+		var updateTileOverlay = function() {
+
+			if (!window.matchMedia('(max-width: 480px)').matches) {
+				$tiles.removeClass('mobile-overlay-off');
+				return;
+			}
+
+			var viewportCenter = $window.scrollTop() + ($window.height() / 2);
+
+			$tiles.each(function() {
+				var $this = $(this);
+				var articleCenter = $this.offset().top + ($this.outerHeight() / 2);
+
+				if (Math.abs(articleCenter - viewportCenter) < 120) {
+					$this.addClass('mobile-overlay-off');
+				}
+				else {
+					$this.removeClass('mobile-overlay-off');
+				}
+			});
+
+		};
+
+		$window.on('scroll resize load', updateTileOverlay);
+
 		$tiles.each(function() {
 
 			var $this = $(this),
