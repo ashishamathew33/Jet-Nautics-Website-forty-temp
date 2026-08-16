@@ -3171,6 +3171,73 @@ input, select, textarea {
 				background-color: #53e3fb;
 			}
 
+		#header .header-icons {
+			display: -moz-flex;
+			display: -webkit-flex;
+			display: -ms-flex;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			left: 50%;
+			margin: 0;
+			padding: 0;
+			position: absolute;
+			transform: translateX(-50%);
+			z-index: 2;
+		}
+
+			#header .header-icons li {
+				display: inline-block;
+				list-style: none;
+				margin: 0;
+				padding: 0 0.75em;
+			}
+
+				#header .header-icons li:last-child {
+					padding-right: 0;
+				}
+
+			#header .header-icons a.icon.alt {
+				background-color: #ffffff;
+				border: 1px solid rgba(255, 255, 255, 0.2);
+				border-radius: 0.45em;
+				display: -moz-inline-flex;
+				display: -webkit-inline-flex;
+				display: -ms-inline-flex;
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				height: 2.1em;
+				line-height: 1;
+				text-align: center;
+				transition: background-color 0.2s ease-in-out;
+				width: 2.1em;
+			}
+
+			#header .header-icons a.icon.alt:before {
+				background-color: transparent;
+				border-radius: 0.45em;
+				color: #242943;
+				display: -moz-flex;
+				display: -webkit-flex;
+				display: -ms-flex;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				height: 100%;
+				line-height: 1;
+				text-align: center;
+				width: 100%;
+			}
+
+			#header .header-icons a.icon.alt:hover {
+				background-color: #6fc3df;
+			}
+
+			#header .header-icons a.icon.alt:active {
+				background-color: #37a6cb;
+			}
+
 		#header nav {
 			display: -moz-flex;
 			display: -webkit-flex;
@@ -3329,8 +3396,28 @@ input, select, textarea {
 			}
 
 				#header .logo {
-					padding: 0 1em;
+					padding: 0 1.25em;
 				}
+
+				#header .header-icons {
+					left: calc(50% + 3.0em);
+					max-width: 9.5em;
+					width: calc(100% - 14em);
+					transform: translateX(-50%);
+				}
+
+					#header .header-icons li {
+						padding: 0 0.35em;
+					}
+
+					#header .header-icons a.icon.alt {
+						height: 1.5em;
+						width: 1.5em;
+					}
+
+					#header .header-icons a.icon.alt:before {
+						font-size: 0.78em;
+					}
 
 				#header nav a {
 					padding: 0 0.5em;
