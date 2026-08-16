@@ -1786,8 +1786,8 @@ input, select, textarea {
 				content: '';
 				background-color: #ffffff;
 				display: block;
-				height: 2px;
-				margin: 0.325em 0 0.5em 0;
+				height: 1px;
+				margin: 0.2em 0 0.4em 0;
 				width: 100%;
 			}
 
@@ -2907,7 +2907,7 @@ input, select, textarea {
 
 				.tiles article.mobile-overlay-off:before,
 				.tiles article.mobile-overlay-off:after {
-					opacity: 0;
+					opacity: 0.30;
 				}
 
 		}
@@ -3513,7 +3513,7 @@ input, select, textarea {
 			display: block;
 			height: 100%;
 			left: 0;
-			opacity: 0.85;
+			opacity: 0.10;
 			position: absolute;
 			top: 0;
 			width: 100%;
